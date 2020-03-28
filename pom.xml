@@ -11,6 +11,7 @@
         <module>mp_base</module>
         <module>mp_spring</module>
         <module>mp_springboot</module>
+        <module>mp_generator</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -18,51 +19,51 @@
         <version>2.2.4.RELEASE</version>
     </parent>
 
-<!--    <dependencyManagement>-->
-<dependencies>
-    <!--mybatis-plus插件依赖-->
-    <dependency>
-        <groupId>com.baomidou</groupId>
-        <artifactId>mybatis-plus</artifactId>
-        <version>3.3.1</version>
-    </dependency>
+    <dependencyManagement>
+        <dependencies>
+            <!--mybatis-plus插件依赖-->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus</artifactId>
+                <version>3.3.1</version>
+            </dependency>
 
-    <!--mysql驱动-->
-    <dependency>
-        <groupId>mysql</groupId>
-        <artifactId>mysql-connector-java</artifactId>
-        <version>5.1.47</version>
-    </dependency>
+            <!--mysql驱动-->
+            <dependency>
+                <groupId>mysql</groupId>
+                <artifactId>mysql-connector-java</artifactId>
+                <version>5.1.47</version>
+            </dependency>
 
-    <!-- druid连接池 -->
-    <dependency>
-        <groupId>com.alibaba</groupId>
-        <artifactId>druid</artifactId>
-        <version>1.1.21</version>
-    </dependency>
+            <!-- druid连接池 -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>1.1.21</version>
+            </dependency>
 
-    <!--lombok-->
-    <dependency>
-        <groupId>org.projectlombok</groupId>
-        <artifactId>lombok</artifactId>
-        <version>1.18.12</version>
-    </dependency>
+            <!--lombok-->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>1.18.12</version>
+            </dependency>
 
-    <dependency>
-        <groupId>junit</groupId>
-        <artifactId>junit</artifactId>
-        <version>4.12</version>
-    </dependency>
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.12</version>
+            </dependency>
 
-    <!--日志-->
-    <dependency>
-        <groupId>org.slf4j</groupId>
-        <artifactId>slf4j-log4j12</artifactId>
-        <version>2.0.0-alpha1</version>
-    </dependency>
+            <!--日志-->
+            <dependency>
+                <groupId>org.slf4j</groupId>
+                <artifactId>slf4j-log4j12</artifactId>
+                <version>2.0.0-alpha1</version>
+            </dependency>
 
-</dependencies>
-<!--    </dependencyManagement>-->
+        </dependencies>
+    </dependencyManagement>
 
     <build>
         <plugins>
