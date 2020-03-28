@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.conditions.update.UpdateWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.mobei.mp.enums.SexEnum;
 import com.mobei.mp.mapper.UserMapper;
 import com.mobei.mp.pojo.User;
 import org.junit.Test;
@@ -37,6 +38,7 @@ public class MyBatisMpSb {
         user.setAge(30);
         user.setPassword("123456");
         user.setUserName("guanyu");
+        user.setSex(SexEnum.MAN);
 
         //表中如果没有address字段,但是对象中定义了,如果不处理就会报错
         //如果想要正常执行需要在对象中

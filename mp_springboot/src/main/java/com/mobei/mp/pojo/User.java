@@ -1,9 +1,7 @@
 package com.mobei.mp.pojo;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
+import com.mobei.mp.enums.SexEnum;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -30,7 +28,8 @@ import lombok.NoArgsConstructor;
  *                      @TableField(select = false)
  *                      private String password;
  *
- *
+ *      fill:配合MyMetaObjectHandler使用,设置自动填充的策略
+ *          插入或者更新数据时,希望有些字段可以自动填充数据比如password
  *
  *
  */
@@ -44,7 +43,7 @@ public class User {
 
     private String userName;
 
-    @TableField(select = false)
+    @TableField(select = false, fill = FieldFill.INSERT)
     private String password;
 
     private String name;
@@ -56,5 +55,17 @@ public class User {
 
     @TableField(exist = false)
     private String address;//在数据库表中是不存在address字段的
+
+    /**
+     * 表中需要有对应字段
+     * 逻辑删除: 1-删除 0-未删除
+     */
+    @TableLogic
+    private Integer deleted;
+
+    /**
+     * 性别:枚举类型  数据库中sex 类型为:int(1)
+     */
+    private SexEnum sex;
 
 }
