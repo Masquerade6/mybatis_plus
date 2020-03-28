@@ -1,0 +1,4 @@
+# Project exclude paths
+/mp_base/target/
+/mp_spring/target/
+/mp_springboot/target/
