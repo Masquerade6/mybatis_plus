@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mobei.mp.user.mapper.TbUserMapper">
+
+    <select id="findAll" resultType="com.mobei.mp.user.entity.TbUser"></select>
+</mapper>
